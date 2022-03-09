@@ -1,0 +1,105 @@
+﻿
+<div class="modal fade"
+     id="bookCreate"
+     data-bs-backdrop="static"
+     data-bs-keyboard="false"
+     aria-labelledby="bookTitle"
+     aria-hidden="true"
+     >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="bookTitle">CREATE BOOKING</h5>
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                        ></button>
+            </div>
+            <div class="modal-body">
+                <form id="createBook"
+                      class="needs-validtion"
+                      action="/Book/Create"
+                      method="post"
+                      autocomplete="off"
+                      novalidate>
+                    <div class="form-floating mb-3">
+                        <select class="form-select mw-100"
+                                name="txtconsumer"
+                                id="book_consumer"
+                                aria-label="consumer"
+                                required>
+                            <option value="" selected disabled>--select consumer--</option>
+                            <option>sinoeun</option>
+                            <option>donate</option>
+                            <option>pasta</option>
+                        </select>
+                        <label for="book_consumer">CONSUMER NAME</label>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="date"
+                               id="booking_date"
+                               name="txtbooking_date"
+                               class="form-control mw-100"
+                               placeholder="bookingDate"
+                               required />
+                        <label for="booking_date">BOOKING DATE</label>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="date"
+                               id="bookCheckin_date"
+                               name="textcheck"
+                               class="form-control mw-100"
+                               placeholder="bookCheckinDate"
+                               required />
+                        <label for="bookCheckin_date">CHECKIN DATE</label>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="date"
+                               id="bookCheckout"
+                               name="txtbookCheckout"
+                               class="form-control mw-100"
+                               placeholder="BookCheckout"
+                               required />
+                        <label for="bookCheckout">CHECKOUT DATE</label>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text"
+                               id="agency"
+                               name="txtagency"
+                               class="form-control mw-100"
+                               placeholder="agency"
+                               required />
+                        <label for="agency">AGENCY</label>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number"
+                               id="night"
+                               name="txtnight"
+                               class="form-control mw-100"
+                               placeholder="night"
+                               required />
+                        <label for="agency">NIGTHS</label>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit"
+                                class="btn btn-primary m-1">
+                            SAVE
+                        </button>
+                        <button type="button"
+                                class="btn btn-danger m-1"
+                                data-bs-dismiss="modal"
+                                >CANCEL</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

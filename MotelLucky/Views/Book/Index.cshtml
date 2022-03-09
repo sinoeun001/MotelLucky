@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Booking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title text-primary text-center">BOOKING INFORMATION</h5>
+        <button type="button"
+                class="btn btn-primary "
+                data-bs-toggle="modal"
+                data-bs-target="#bookCreate">
+            --BOOKING--
+        </button>
+    </div>
+    <div class="card-body">
+        <table class="table table-responsive-sm table-striped" id="book" style="width:100%;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>CONSUMER NAME</th>
+                    <th>BOOKING DATE</th>
+                    <th>CHECKIN DATE</th>
+                    <th>CHECKOUT DATE</th>
+                    <th>NIGHTS</th>
+                    <th>FEE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Dora Fie</td>
+                    <td>07/04/2022</td>
+                    <td>10/04/2022</td>
+                    <td>16/06/2022</td>
+                    <td>6</td>
+                    <td>160</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+@Html.Partial("_CreateBooking")
+@section scripts{
+
+   <script>
+       $(document).ready(function () {
+
+           $("#book").DataTable()
+
+       })
+       formValidation();
+    </script>
+
+}
+

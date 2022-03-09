@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card my-3">
+    <div class="card-header">
+        <h5 class="card-title text-uppercase text-info text-center">consumer infromation</h5>
+        <button type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#createConsumer">
+            --ADD CONSUMER--
+        </button>
+    </div>
+    <div class="card-body  table-responsive-sm">
+        <table class="table table-striped " id="consumer" style="width:100%;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>PASSPORT/ID</th>
+                    <th>PHONE</th>
+                    <th>CUSTOMER TYPE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>sinoeun</td>
+                    <td>passport</td>
+                    <td>0967768893</td>
+                    <td>VIP</td>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>sinoeun</td>
+                    <td>passport</td>
+                    <td>0967768893</td>
+                    <td>VIP</td>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>sinoeun</td>
+                    <td>passport</td>
+                    <td>0967768893</td>
+                    <td>VIP</td>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>sinoeun</td>
+                    <td>passport</td>
+                    <td>0967768893</td>
+                    <td>VIP</td>
+                </tr>
+            </tbody>         
+        </table>
+
+    </div>
+    @Html.Partial("_CreateConsumer")
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#consumer").DataTable();
+        });
+        formValidation();
+    </script>
+}
